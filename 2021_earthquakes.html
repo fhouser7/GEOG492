@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title>University of Oregon Mapping</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!--    Include the reference to the Mapbox JavaScript here in the <head> of the page  (Part I.1)  -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js'></script>          
+    <!--    Include the reference to the Mapbox CSS here in between <head> tags    (Part I.2) -->
+    
+    <style>
+      /* Insert the additional CSS code here between the <style> tags  (Part I.4)   */
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }  
+      #banner { z-index: 9999; 
+        background-color: #ffc067; 
+        opacity: 80%; 
+        text-align: center 
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!--  Insert the map div here in the <body> of the page  (Part I)  -->
+    <div id='map'></div>
+    <!--  Insert the title div here (part VI) -->
+    <div id="banner">
+      <h1>Map of 2021 Earthquakes</h1>
+      <h2>By: Fiona Houser</h2>
+    </div>
+
+    <script>
+        // Insert the JavaScript within the <script> tags, within the body   
+        // Start with the Mapbox access token here (Part 2.1)
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZmhvdXNlcjU4IiwiYSI6ImNtbmdyZXZlZTBidDAyd29wd3ViM2hzMXUifQ.QpQEhfaz0U3huMOt0UxhCg';
+        // Then initialize the map here (Part 2.2)
+        var map = new mapboxgl.Map({
+          container: 'map', // id of a div on your page, where the map will be inserted
+          style: 'mapbox://styles/fhouser58/cmoj4auuc001t01stb49va6sd', // stylesheet location
+          center: [-98.35, 39.50], // starting position [lng, lat] eg. [-122.6788, 45.5212]
+          zoom: 1 // starting zoom - initially 11
+        });
+        // Add the zoom contols here (part V)
+        map.addControl(new mapboxgl.NavigationControl({
+          showCompass: false
+          }), 'bottom-left');
+    </script>
+
+  </body>
+
+</html>

@@ -10,7 +10,7 @@ Graylag x Canada Goose,Anser anser x Branta canadensis,https://ebird.org/species
 Trumpeter/Tundra Swan,Cygnus buccinator/columbianus,https://ebird.org/species/trutus
 Muscovy Duck,Cairina moschata,https://ebird.org/species/musduc
 Wood Duck,Aix sponsa,https://ebird.org/species/wooduc
-Blue-winged Teal,Spatula discors,https://ebird.org/species/blutea
+Blue-winged Teal,Spatula discors,https://ebird.org/species/buwtea
 Cinnamon Teal,Spatula cyanoptera,https://ebird.org/species/cintea
 Northern Shoveler,Spatula clypeata,https://ebird.org/species/norsho
 Gadwall,Mareca strepera,https://ebird.org/species/gadwal
@@ -22,7 +22,7 @@ Green-winged Teal,Anas crecca,https://ebird.org/species/gnwtea
 Ring-necked Duck,Aythya collaris,https://ebird.org/species/rinduc
 Greater Scaup,Aythya marila,https://ebird.org/species/gresca
 Lesser Scaup,Aythya affinis,https://ebird.org/species/lessca
-Greater/Lesser Scaup,Aythya marila/affinis,https://ebird.org/species/y00044
+Greater/Lesser Scaup,Aythya marila/affinis,https://ebird.org/species/scaup
 Bufflehead,Bucephala albeola,https://ebird.org/species/buffle
 Common Goldeneye,Bucephala clangula,https://ebird.org/species/comgol
 Barrow's Goldeneye,Bucephala islandica,https://ebird.org/species/bargol
@@ -31,7 +31,7 @@ Common Merganser,Mergus merganser,https://ebird.org/species/commer
 Ruddy Duck,Oxyura jamaicensis,https://ebird.org/species/rudduc
 Wild Turkey,Meleagris gallopavo,https://ebird.org/species/wiltur
 Rock Pigeon,Columba livia,https://ebird.org/species/rocpig
-Band-tailed Pigeon,Patagioenas fasciata,https://ebird.org/species/batpig
+Band-tailed Pigeon,Patagioenas fasciata,https://ebird.org/species/batpig1
 Eurasian Collared-Dove,Streptopelia decaocto,https://ebird.org/species/eucdov
 Mourning Dove,Zenaida macroura,https://ebird.org/species/moudov
 Vaux's Swift,Chaetura vauxi,https://ebird.org/species/vauswi
@@ -42,24 +42,24 @@ American Coot,Fulica americana,https://ebird.org/species/amecoo
 Killdeer,Charadrius vociferus,https://ebird.org/species/killde
 Short-billed Dowitcher,Limnodromus griseus,https://ebird.org/species/shbdow
 Long-billed Dowitcher,Limnodromus scolopaceus,https://ebird.org/species/lobdow
-Short-billed/Long-billed Dowitcher,Limnodromus griseus/scolopaceus,https://ebird.org/species/dowitch
+Short-billed/Long-billed Dowitcher,Limnodromus griseus/scolopaceus,https://ebird.org/species/dowitc
 Wilson's Snipe,Gallinago delicata,https://ebird.org/species/wilsni1
 Red-necked Phalarope,Phalaropus lobatus,https://ebird.org/species/renpha
 Spotted Sandpiper,Actitis macularius,https://ebird.org/species/sposan
 Solitary Sandpiper,Tringa solitaria,https://ebird.org/species/solsan
 Lesser Yellowlegs,Tringa flavipes,https://ebird.org/species/lesyel
-Greater Yellowlegs,Tringa melanoleuca,https://ebird.org/species/gleyel
-Lesser/Greater Yellowlegs,Tringa flavipes/melanoleuca,https://ebird.org/species/y0045
+Greater Yellowlegs,Tringa melanoleuca,https://ebird.org/species/greyel
+Lesser/Greater Yellowlegs,Tringa flavipes/melanoleuca,https://ebird.org/species/y00476
 Dunlin,Calidris alpina,https://ebird.org/species/dunlin
 Least Sandpiper,Calidris minutilla,https://ebird.org/species/leasan
 Western Sandpiper,Calidris mauri,https://ebird.org/species/wessan
-Short-billed Gull,Larus brachyrhynchus,https://ebird.org/species/shbgul
+Short-billed Gull,Larus brachyrhynchus,https://ebird.org/species/mewgul2
 Ring-billed Gull,Larus delawarensis,https://ebird.org/species/ribgul
 Western Gull,Larus occidentalis,https://ebird.org/species/wesgul
-American Herring Gull,Larus smithsonianus,https://ebird.org/species/hergul
+American Herring Gull,Larus smithsonianus,https://ebird.org/species/amhgul1
 California Gull,Larus californicus,https://ebird.org/species/calgul
 Glaucous-winged Gull,Larus glaucescens,https://ebird.org/species/glwgul
-Western x Glaucous-winged Gull,Larus occidentalis x glaucescens,https://ebird.org/species/wexgwg
+Western x Glaucous-winged Gull,Larus occidentalis x glaucescens,https://ebird.org/species/x00051
 Iceland Gull,Larus glaucoides,https://ebird.org/species/icegul
 Pied-billed Grebe,Podilymbus podiceps,https://ebird.org/species/pibgre
 Red-necked Grebe,Podiceps grisegena,https://ebird.org/species/rengre
@@ -85,7 +85,7 @@ Red-breasted Sapsucker,Sphyrapicus ruber,https://ebird.org/species/rebsap
 Acorn Woodpecker,Melanerpes formicivorus,https://ebird.org/species/acowoo
 Downy Woodpecker,Dryobates pubescens,https://ebird.org/species/dowwoo
 Hairy Woodpecker,Leuconotopicus villosus,https://ebird.org/species/haiwoo
-Downy/Hairy Woodpecker,Dryobates pubescens/Leuconotopicus villosus,https://ebird.org/species/dohawo
+Downy/Hairy Woodpecker,Dryobates pubescens/Leuconotopicus villosus,https://ebird.org/species/x00803
 Pileated Woodpecker,Dryocopus pileatus,https://ebird.org/species/pilwoo
 Northern Flicker,Colaptes auratus,https://ebird.org/species/norfli
 American Kestrel,Falco sparverius,https://ebird.org/species/amekes
@@ -95,18 +95,18 @@ Olive-sided Flycatcher,Contopus cooperi,https://ebird.org/species/olsfly
 Western Wood-Pewee,Contopus sordidulus,https://ebird.org/species/wewpew
 Willow Flycatcher,Empidonax traillii,https://ebird.org/species/wilfly
 Hammond's Flycatcher,Empidonax hammondii,https://ebird.org/species/hamfly
-Black Phoebe,Sayornis nigricans,https://ebird.org/species/blapho
+Black Phoebe,Sayornis nigricans,https://ebird.org/species/blkpho
 Hutton's Vireo,Vireo huttoni,https://ebird.org/species/hutvir
 Western Warbling Vireo,Vireo swainsoni,https://ebird.org/species/warvir
 Steller's Jay,Cyanocitta stelleri,https://ebird.org/species/stejay
 California Scrub-Jay,Aphelocoma californica,https://ebird.org/species/casjay
 American Crow,Corvus brachyrhynchos,https://ebird.org/species/amecro
 Common Raven,Corvus corax,https://ebird.org/species/comrav
-Black-capped Chickadee,Poecile atricapillus,https://ebird.org/species/bcchic
-Chestnut-backed Chickadee,Poecile rufescens,https://ebird.org/species/chbchic
+Black-capped Chickadee,Poecile atricapillus,https://ebird.org/species/bkcchi
+Chestnut-backed Chickadee,Poecile rufescens,https://ebird.org/species/chbchi
 Tree Swallow,Tachycineta bicolor,https://ebird.org/species/treswa
 Violet-green Swallow,Tachycineta thalassina,https://ebird.org/species/vigswa
-Tree/Violet-green Swallow,Tachycineta bicolor/thalassina,https://ebird.org/species/tavgsw
+Tree/Violet-green Swallow,Tachycineta bicolor/thalassina,https://ebird.org/species/y00701
 Purple Martin,Progne subis,https://ebird.org/species/purmar
 Northern Rough-winged Swallow,Stelgidopteryx serripennis,https://ebird.org/species/nrwswa
 Barn Swallow,Hirundo rustica,https://ebird.org/species/barswa
@@ -115,11 +115,11 @@ Bushtit,Psaltriparus minimus,https://ebird.org/species/bushti
 Wrentit,Chamaea fasciata,https://ebird.org/species/wrenti
 Ruby-crowned Kinglet,Corthylio calendula,https://ebird.org/species/ruckin
 Golden-crowned Kinglet,Regulus satrapa,https://ebird.org/species/gockin
-White-breasted Nuthatch,Sitta carolinensis,https://ebird.org/species/wbnuth
-Red-breasted Nuthatch,Sitta canadensis,https://ebird.org/species/rbnuth
+White-breasted Nuthatch,Sitta carolinensis,https://ebird.org/species/whbnut
+Red-breasted Nuthatch,Sitta canadensis,https://ebird.org/species/rebnut
 Brown Creeper,Certhia americana,https://ebird.org/species/brncre
 Northern House Wren,Troglodytes aedon,https://ebird.org/species/houwre
-Pacific Wren,Troglodytes pacificus,https://ebird.org/species/pacwre
+Pacific Wren,Troglodytes pacificus,https://ebird.org/species/pacwre1
 Marsh Wren,Cistothorus palustris,https://ebird.org/species/marwre
 Bewick's Wren,Thryomanes bewickii,https://ebird.org/species/bewwre
 European Starling,Sturnus vulgaris,https://ebird.org/species/eursta
@@ -136,7 +136,7 @@ Purple Finch,Haemorhous purpureus,https://ebird.org/species/purfin
 Red Crossbill,Loxia curvirostra,https://ebird.org/species/redcro
 Pine Siskin,Spinus pinus,https://ebird.org/species/pinsis
 Lesser Goldfinch,Spinus psaltria,https://ebird.org/species/lesgol
-American Goldfinch,Spinus tristis,https://ebird.org/species/amegof
+American Goldfinch,Spinus tristis,https://ebird.org/species/amegfi
 Chipping Sparrow,Spizella passerina,https://ebird.org/species/chispa
 Fox Sparrow,Passerella iliaca,https://ebird.org/species/foxspa
 Dark-eyed Junco,Junco hyemalis,https://ebird.org/species/daejun
@@ -160,7 +160,7 @@ Northern Yellow Warbler,Setophaga aestiva,https://ebird.org/species/yelwar
 Yellow-rumped Warbler,Setophaga coronata,https://ebird.org/species/yerwar
 Black-throated Gray Warbler,Setophaga nigrescens,https://ebird.org/species/btywar
 Townsend's Warbler,Setophaga townsendi,https://ebird.org/species/towwar
-Wilson's Warbler,Cardellina pusilla,https://ebird.org/species/wilwar
+Wilson's Warbler,Cardellina pusilla,https://ebird.org/species/wlswar
 Western Tanager,Piranga ludoviciana,https://ebird.org/species/westan
-Black-headed Grosbeak,Pheucticus melanocephalus,https://ebird.org/species/bhgros
+Black-headed Grosbeak,Pheucticus melanocephalus,https://ebird.org/species/bkhgro
 Lazuli Bunting,Passerina amoena,https://ebird.org/species/lazbun

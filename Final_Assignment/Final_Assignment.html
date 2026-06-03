@@ -101,6 +101,7 @@
         </div>
         <div class="sidebar cell medium-3 large-2 show-for-medium sidebar-right large-margin-right-auto">
             <h3>Your Bird List:</h3>
+            <ul id="user-bird-list"></ul>
         </div>
     </div>
 
@@ -109,6 +110,21 @@
         // Start with the Mapbox access token here (Part 2.1)
         mapboxgl.accessToken = 'pk.eyJ1IjoiZmhvdXNlcjU4IiwiYSI6ImNtbmdyZXZlZTBidDAyd29wd3ViM2hzMXUifQ.QpQEhfaz0U3huMOt0UxhCg';
 
+        // Attemping to make a user bird list
+        var userBirdList = new Set(); // Stores the checked birds
+
+        // Function to refresh the right sidebar
+        function updateBirdListSidebar() {
+            var sidebarList = document.getElementById('user-bird-list');
+            sidebarList.innerHTML = ''; // Clear current list
+            
+            // Add each checked bird as a new list item
+            userBirdList.forEach(function(birdName) {
+                var li = document.createElement('li');
+                li.textContent = birdName;
+                sidebarList.appendChild(li);
+            });
+        }
         // Set bounds to Eugene, OR
         var bounds = [
           [-123.3911279961701, 43.94766319973422], // Southwest coordinates
@@ -279,10 +295,13 @@
                     if (row.Species) {
                         //html += `<li><strong>${row.Species}</strong> ${row.Scientific ? `(${row.Scientific})` : ''}</li>`;
                         // Code above was a bullet point list, code below is a check list
-                        html += `<li><input type="checkbox" id="bird_check">
-                            <label for="bird_check"><strong>${row.Species}</strong> ${row.Scientific ? `(${row.Scientific})` : ''}</label>
+                        // Updated this section one again, assigning each checkbox a unique ID to prevent repetiton
+                        var safeId = row.Species.replace(/\s+/g, '-').toLowerCase();
+                        html += `<li>
+                            <input type="checkbox" id="check_${safeId}" class="bird-checkbox" value="${row.Species}">
+                            <label for="check_${safeId}"><strong>${row.Species}</strong> ${row.Scientific ? `(${row.Scientific})` : ''}</label>
                             <a href="${row.Link}">learn more</a>
-                            </li>`
+                        </li>`;
                     }
                 });
                 
@@ -298,16 +317,15 @@
                 var popupElement = popupObject.getElement();
                 if (!popupElement) return;
 
+                // Search logic
                 var searchInput = popupElement.querySelector('.popup-search-input');
                 var birdListItems = popupElement.querySelectorAll('.bird-list li');
 
                 if (searchInput) {
                     searchInput.addEventListener('input', function(e) {
                         var filter = e.target.value.toLowerCase();
-                        
                         birdListItems.forEach(function(li) {
                             var text = li.textContent || li.innerText;
-                            // If the bird name matches the search, show it; otherwise, hide it
                             if (text.toLowerCase().indexOf(filter) > -1) {
                                 li.style.display = "";
                             } else {
@@ -316,8 +334,32 @@
                         });
                     });
                 }
+
+                // New checkbox logic
+                var checkboxes = popupElement.querySelectorAll('.bird-checkbox');
+                
+                checkboxes.forEach(function(checkbox) {
+                    // If the bird is already in our list, make sure the box stays checked
+                    if (userBirdList.has(checkbox.value)) {
+                        checkbox.checked = true;
+                    }
+
+                    // Listen for when the user clicks the checkbox
+                    checkbox.addEventListener('change', function(e) {
+                        var speciesName = e.target.value;
+                        
+                        if (e.target.checked) {
+                            userBirdList.add(speciesName); // Add to our list
+                        } else {
+                            userBirdList.delete(speciesName); // Remove from our list
+                        }
+                        
+                        // Trigger the sidebar to update visually
+                        updateBirdListSidebar();
+                    });
+                });
             });
-        }
+        };
 
         // Trigger the loader for all 5 files individually
         map.on('load', function() {

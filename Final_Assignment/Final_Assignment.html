@@ -40,6 +40,17 @@
             width: 250px;
         }
 
+        /*Styling right sidebar*/
+        /*
+        .sidebar-right {
+            position: absolute;
+            z-index: 2;
+            padding: 1rem;
+            background-color: WhiteSmoke;
+            width: 250px;
+        }
+            */
+
         /* Reformatting based on device/screen size */
         @media print, screen and (min-width: 40em) {
             .sidebar {
@@ -68,7 +79,7 @@
 
     <div class="site-main grid-x has-content-open">
         <!--  Inserting a side bar here -->
-        <div class="sidebar cell medium-3 large-2 large-order-1 show-for-medium">
+        <div class="sidebar cell medium-3 large-2 large-order-1 show-for-medium sidebar-left">
             <h2>Fiona Houser's Top 5 Birding Spots in Eugene, OR</h2>
             <h7>This is my final project for Geography 492, Web Mapping. This map is meant to serve as an easy way for beginner birders
                 to find a place to start. This map tells the story of the vast biodiversity that can be found in and around Eugene, 
@@ -80,12 +91,15 @@
             </h7>
             <h5>Featured Areas:</h5>
             <ul>
-                <li>Fern Ridge Wildlife Area</li>
-                <li>Delta Ponds</li>
-                <li>Amazon Park</li>
-                <li>Black Oak Basin Park</li>
-                <li>Mt. Pitsgah Arboretum</li>
+                <li><a href="#" id="link-fern">Fern Ridge Wildlife Area</a></li>
+                <li><a href="#" id="link-delta">Delta Ponds</a></li>
+                <li><a href="#" id="link-amazon">Amazon Park</a></li>
+                <li><a href="#" id="link-oak">Black Oak Basin Park</a></li>
+                <li><a href="#" id="link-pisgah">Mt. Pitsgah Arboretum</a></li>
             </ul>
+        </div>
+        <div class="sidebar cell medium-3 large-2 large-order-1 show-for-medium sidebar-right">
+            <h3>Your Bird List</h3>
         </div>
     </div>
 
@@ -191,6 +205,45 @@
             .addTo(map);
 
         /***  END MARKERS  ***/
+
+        /*** SIDEBAR CLICK EVENTS ***/
+        
+        // Fern Ridge Wildlife Area (marker1)
+        document.getElementById('link-fern').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevents the page from scrolling to the top
+            map.flyTo({ center: [-123.25978496851499, 44.070538367785105], zoom: 12 }); // Zooms to location
+            marker1.togglePopup(); // Opens the popup
+        });
+
+        // Mt. Pitsgah Arboretum (marker2)
+        document.getElementById('link-pisgah').addEventListener('click', function(e) {
+            e.preventDefault();
+            map.flyTo({ center: [-122.979393984357, 44.005851242467145], zoom: 13 });
+            marker2.togglePopup();
+        });
+
+        // Delta Ponds (marker3)
+        document.getElementById('link-delta').addEventListener('click', function(e) {
+            e.preventDefault();
+            map.flyTo({ center: [-123.1075878959009, 44.078239495360066], zoom: 13 });
+            marker3.togglePopup();
+        });
+
+        // Black Oak Basin Park (marker4)
+        document.getElementById('link-oak').addEventListener('click', function(e) {
+            e.preventDefault();
+            map.flyTo({ center: [-123.0435033466378, 44.01847880286007], zoom: 13 });
+            marker4.togglePopup();
+        });
+
+        // Amazon Park (marker5)
+        document.getElementById('link-amazon').addEventListener('click', function(e) {
+            e.preventDefault();
+            map.flyTo({ center: [-123.08584727224877, 44.03106648154335], zoom: 13 });
+            marker5.togglePopup();
+        });
+        
+        /*** END SIDEBAR CLICK EVENTS ***/
 
         function loadBirdCSV(filePath, popupObject, locationTitle, description = "") {
             Papa.parse(filePath, {

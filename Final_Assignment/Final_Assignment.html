@@ -82,6 +82,26 @@
             left: 10px;
             cursor: pointer;
         }
+
+        /* Position and style the close button (top right corner) */
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* The button used to open the sidebar */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            position: absolute;
+        }
  
     </style>
     <!-- Making every link automatically open to a new tab-->
@@ -115,9 +135,18 @@
             <br></br>
             <button type="button" class="info_btn" id="info_btn"><i class="fa fa-info"></i></button>
         </div>
+        <!-- My bird checklist sidebar-->
         <div class="sidebar cell medium-3 large-2 show-for-medium sidebar-right large-margin-right-auto">
+            <!-- Attempting to make this sidebar collapseable-->
+            <a class="closebtn" onclick="closeNav()" style="cursor: pointer;">&times;</a>
             <h3>Your Bird List:</h3>
             <ul id="user-bird-list"></ul>
+        </div>
+        <!-- Open sidebar button -->
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button> 
+            <h2>Collapsed Sidebar</h2>
+            <p>Content...</p>
         </div>
     </div>
 
@@ -156,45 +185,47 @@
             minZoom: 0.1,
             maxZoom: 15,
             maxBounds: bounds
-        }); 
+        });
 
-        // Add the zoom contols here (part V)
-   
-        // Add popups for markers here. Yes, before the markers!  (part IV)
+        // Open and close my bird list sidebar
+        function openNav() {
+            document.getElementById("my-sidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("my-sidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+
         /***  POPUPS  ***/
         // Part A III. markers go here
         // Popup for Fern Ridge Lake  
         var popup1_content = '<h2>Fern Ridge Lake</h2><br>';
-        //popup1_content += '<a href="https://myodfw.com/fern-ridge-wildlife-area-visitors-guide">Learn More</a>';
         var popup1 = new mapboxgl.Popup({ minWidth:'300px' })
             .setHTML(popup1_content);
             
         
         // Popup for Mt Pitsgah Arboretum 
         var popup2_content = '<h2>Mt Pitsgah Arboretum</h2><br>';
-        //popup2_content += '<a href="https://mountpisgaharboretum.org/">Learn More</a>'; 
         var popup2 = new mapboxgl.Popup({ minWidth:'300px' })
             .setHTML(popup2_content);
 
             
         // Popup for Delta Ponds  
         var popup3_content = '<h2>Delta Ponds</h2><br>';
-        //popup3_content += '<h3>The Delta Ponds feature wetlands, ponds, and other water ways. This spot is perfect for spotting waterfowl, like ducks and geese.</h2><br>';
-        //popup3_content += '<a href="https://www.eugene-or.gov/facilities/facility/details/Delta-Ponds-133">Learn More</a>';
         var popup3 = new mapboxgl.Popup({ minWidth:'300px' }) //originally 300
             .setHTML(popup3_content);
         
         
         // Popup for Black Oak Basin
         var popup4_content = '<h2>Black Oak Basin Park</h2><br>';
-        //popup4_content += '<a href="https://www.eugene-or.gov/Facilities/Facility/Details/Black-Oak-Basin-169">Learn More</a>';
         var popup4 = new mapboxgl.Popup({ minWidth:'300px' })
             .setHTML(popup4_content);
 
         
         // Popup for Amazon Park
         var popup5_content = '<h2>Amazon Park</h2>';
-        //popup5_content += '<a href="https://www.eugene-or.gov/Facilities/Facility/Details/30">Learn More</a>';
         var popup5 = new mapboxgl.Popup({ minWidth:'300px' })
             .setHTML(popup5_content);
 

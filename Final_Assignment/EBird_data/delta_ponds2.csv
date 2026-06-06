@@ -5,9 +5,9 @@ Swan Goose,Anser cygnoides,https://ebird.org/species/swagoo1
 Greater White-fronted Goose,Anser albifrons,https://ebird.org/species/gwfgoo
 Cackling Goose,Branta hutchinsii,https://ebird.org/species/cacgoo1
 Canada Goose,Branta canadensis,https://ebird.org/species/cangoo
-Swan x Canada Goose,Anser cygnoides x Branta canadensis,https://ebird.org/species/swxcan
-Graylag x Canada Goose,Anser anser x Branta canadensis,https://ebird.org/species/gxcgoo
-Trumpeter/Tundra Swan,Cygnus buccinator/columbianus,https://ebird.org/species/trutus
+Swan x Canada Goose,Anser cygnoides x Branta canadensis,https://ebird.org/species/swagoo3
+Graylag x Canada Goose,Anser anser x Branta canadensis,https://ebird.org/species/x00758
+Trumpeter/Tundra Swan,Cygnus buccinator/columbianus,https://ebird.org/species/x00418
 Muscovy Duck,Cairina moschata,https://ebird.org/species/musduc
 Wood Duck,Aix sponsa,https://ebird.org/species/wooduc
 Blue-winged Teal,Spatula discors,https://ebird.org/species/buwtea
@@ -63,7 +63,7 @@ Western x Glaucous-winged Gull,Larus occidentalis x glaucescens,https://ebird.or
 Iceland Gull,Larus glaucoides,https://ebird.org/species/icegul
 Pied-billed Grebe,Podilymbus podiceps,https://ebird.org/species/pibgre
 Red-necked Grebe,Podiceps grisegena,https://ebird.org/species/rengre
-Horned/Eared Grebe,Podiceps auritus/nigricollis,https://ebird.org/species/horear
+Horned/Eared Grebe,Podiceps auritus/nigricollis,https://ebird.org/species/y00229
 Western Grebe,Aechmophorus occidentalis,https://ebird.org/species/wesgre
 Double-crested Cormorant,Nannopterum auritum,https://ebird.org/species/doccor
 American Bittern,Botaurus lentiginosus,https://ebird.org/species/amebit
@@ -76,7 +76,7 @@ Turkey Vulture,Cathartes aura,https://ebird.org/species/turvul
 Osprey,Pandion haliaetus,https://ebird.org/species/osprey
 Sharp-shinned Hawk,Accipiter striatus,https://ebird.org/species/shshaw
 Cooper's Hawk,Astur cooperii,https://ebird.org/species/coohaw
-Sharp-shinned/Cooper's Hawk,Accipiter striatus/Astur cooperii,https://ebird.org/species/sschar
+Sharp-shinned/Cooper's Hawk,Accipiter striatus/Astur cooperii,https://ebird.org/species/y00612
 Bald Eagle,Haliaeetus leucocephalus,https://ebird.org/species/baleag
 Red-shouldered Hawk,Buteo lineatus,https://ebird.org/species/reshaw
 Red-tailed Hawk,Buteo jamaicensis,https://ebird.org/species/rethaw

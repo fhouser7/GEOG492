@@ -247,6 +247,18 @@
 
         /***  END POPUPS  ***/  
 
+        /*** HELPER FUNCTION: CLOSE ALL POPUPS ***/
+        var allPopups = [popup1, popup2, popup3, popup4, popup5, popup6];
+
+        // Adding this function because of a glitch with the sidebar links
+        // Making sure that any open popups close when you click a sidebar link
+        function closeAllPopups() {
+            allPopups.forEach(function(popup) {
+                if (popup.isOpen()) {
+                    popup.remove();
+                }
+            });
+        }
 
         /***  MARKERS  ***/
         // Part A II. markers go here
@@ -291,6 +303,7 @@
         // Fern Ridge Wildlife Area (marker1)
         document.getElementById('link-fern').addEventListener('click', function(e) {
             e.preventDefault(); // Prevents the page from scrolling to the top
+            closeAllPopups(); // Closes any open popups first!
             map.flyTo({ center: [-123.25978496851499, 44.070538367785105], zoom: 12 }); // Zooms to location
             marker1.togglePopup(); // Opens the popup
         });
@@ -298,6 +311,7 @@
         // Mt. Pitsgah Arboretum (marker2)
         document.getElementById('link-pisgah').addEventListener('click', function(e) {
             e.preventDefault();
+            closeAllPopups(); // Closes any open popups first!
             map.flyTo({ center: [-122.979393984357, 44.005851242467145], zoom: 13 });
             marker2.togglePopup();
         });
@@ -305,6 +319,7 @@
         // Delta Ponds (marker3)
         document.getElementById('link-delta').addEventListener('click', function(e) {
             e.preventDefault();
+            closeAllPopups(); // Closes any open popups first!
             map.flyTo({ center: [-123.1075878959009, 44.078239495360066], zoom: 13 });
             marker3.togglePopup();
         });
@@ -312,6 +327,7 @@
         // Black Oak Basin Park (marker4)
         document.getElementById('link-oak').addEventListener('click', function(e) {
             e.preventDefault();
+            closeAllPopups(); // Closes any open popups first!
             map.flyTo({ center: [-123.0435033466378, 44.01847880286007], zoom: 13 });
             marker4.togglePopup();
         });
@@ -319,6 +335,7 @@
         // Amazon Park (marker5)
         document.getElementById('link-amazon').addEventListener('click', function(e) {
             e.preventDefault();
+            closeAllPopups(); // Closes any open popups first!
             map.flyTo({ center: [-123.08584727224877, 44.03106648154335], zoom: 13 });
             marker5.togglePopup();
         });

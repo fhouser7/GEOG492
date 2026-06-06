@@ -74,6 +74,14 @@
         .popupImage{
             width:100%;
         }
+
+        .info_btn {
+            color: black;
+            position: absolute;
+            bottom: 40px;
+            left: 10px;
+            cursor: pointer;
+        }
  
     </style>
     <!-- Making every link automatically open to a new tab-->
@@ -104,6 +112,8 @@
                 <li><a href="#" id="link-oak">Black Oak Basin Park</a></li>
                 <li><a href="#" id="link-pisgah">Mt. Pitsgah Arboretum</a></li>
             </ul>
+            <br></br>
+            <button type="button" class="info_btn" id="info_btn"><i class="fa fa-info"></i></button>
         </div>
         <div class="sidebar cell medium-3 large-2 show-for-medium sidebar-right large-margin-right-auto">
             <h3>Your Bird List:</h3>
@@ -188,6 +198,11 @@
         var popup5 = new mapboxgl.Popup({ minWidth:'300px' })
             .setHTML(popup5_content);
 
+        var popup6_content = '<h2>Citations</h2>';
+        popup6_content += 'eBird. 2021. eBird: An online database of bird distribution and abundance [web application]. eBird, Cornell Lab of Ornithology, Ithaca, New York. Available: http://www.ebird.org. (Accessed: May 26, 2026).';
+        var popup6 = new mapboxgl.Popup({ minWidth:'300px' })
+            .setHTML(popup6_content);
+
         /***  END POPUPS  ***/  
 
 
@@ -266,6 +281,18 @@
             marker5.togglePopup();
         });
         
+        // Adding functionality to the info button
+        const button = document.getElementById("info_btn");
+        button.addEventListener("click", function(e) {
+            e.preventDefault(); 
+            // Check if the popup is already open. If so, remove it.
+            if (popup6.isOpen()) {
+                popup6.remove();
+            } else {
+                // Set the popup to the current center of the map and display it
+                popup6.setLngLat(map.getCenter()).addTo(map);
+            }
+        });
         /*** END SIDEBAR CLICK EVENTS ***/
 
         function loadBirdCSV(filePath, popupObject, locationTitle, description = "") {

@@ -178,7 +178,7 @@
         }
         // Set bounds to Eugene, OR
         var bounds = [
-          [-123.3911279961701, 43.94766319973422], // Southwest coordinates
+          [-123.3911279961701, 43.85], // Southwest coordinates
 	        [-122.89668210184816, 44.16739458199325] // Northeast coordinates 
 	      ];
  
@@ -187,8 +187,8 @@
             container: 'map', // id of a div on your page, where the map will be inserted
             style: 'mapbox://styles/mapbox/outdoors-v12', // stylesheet location
             center: [-123.11255819524261, 44.05922776503269], // starting position [lng, lat] eg. [-122.6788, 45.5212]
-            zoom: 5, // changed from 13 to 10, then to 5
-            minZoom: 0.1,
+            zoom: 11, // changed from 13 to 10, then to 5
+            minZoom: 10,
             maxZoom: 15,
             maxBounds: bounds
         });
@@ -298,13 +298,56 @@
 
         /***  END MARKERS  ***/
 
+        /*** Adding Listeners to markers to center them when opened***/
+        // Add a 'Listener' to Fern Ridge popup
+        marker1.getElement().addEventListener('click', function () {
+                map.jumpTo({
+                    center: [-123.25978496851499, 43.99], 
+                    zoom: 11
+                });
+        });
+
+        // Add a 'Listener' to Mt Pitsgah Arboretum popup
+        marker2.getElement().addEventListener('click', function () {
+                map.jumpTo({
+                    center: [-122.979393984357, 43.9253128747], 
+                    zoom: 11 //origianlly 11
+                });
+        });
+
+        // Add a 'Listener' to Delta Ponds popup
+        marker3.getElement().addEventListener('click', function () {
+                map.jumpTo({
+                    center: [-123.1075878959009, 43.9977011276], 
+                    zoom: 11
+                });
+        });
+
+        // Add a 'Listener' to Black Oak Basin Park popup
+        marker4.getElement().addEventListener('click', function () {
+                map.jumpTo({
+                    center: [-123.0435033466378, 43.9379404351], 
+                    zoom: 11
+                });
+        });
+
+        // Add a 'Listener' to Amazon Park popup
+        marker5.getElement().addEventListener('click', function () {
+                map.jumpTo({
+                    center: [-123.08584727224877, 43.9505281138], 
+                    zoom: 11
+                });
+        });
+
+        /*** End Marker listeners***/
+
         /*** SIDEBAR CLICK EVENTS ***/
         
         // Fern Ridge Wildlife Area (marker1)
         document.getElementById('link-fern').addEventListener('click', function(e) {
             e.preventDefault(); // Prevents the page from scrolling to the top
             closeAllPopups(); // Closes any open popups first!
-            map.flyTo({ center: [-123.25978496851499, 44.070538367785105], zoom: 12 }); // Zooms to location
+            map.flyTo({ center: [-123.25978496851499, 43.99], zoom: 11 }); // Zooms to location
             marker1.togglePopup(); // Opens the popup
         });
 
@@ -312,7 +355,7 @@
         document.getElementById('link-pisgah').addEventListener('click', function(e) {
             e.preventDefault();
             closeAllPopups(); // Closes any open popups first!
-            map.flyTo({ center: [-122.979393984357, 44.005851242467145], zoom: 13 });
+            map.flyTo({ center: [-122.979393984357, 43.9253128747], zoom: 11 });
             marker2.togglePopup();
         });
 
@@ -320,7 +363,7 @@
         document.getElementById('link-delta').addEventListener('click', function(e) {
             e.preventDefault();
             closeAllPopups(); // Closes any open popups first!
-            map.flyTo({ center: [-123.1075878959009, 44.078239495360066], zoom: 13 });
+            map.flyTo({ center: [-123.1075878959009, 43.9977011276], zoom: 11 });
             marker3.togglePopup();
         });
 
@@ -328,7 +371,7 @@
         document.getElementById('link-oak').addEventListener('click', function(e) {
             e.preventDefault();
             closeAllPopups(); // Closes any open popups first!
-            map.flyTo({ center: [-123.0435033466378, 44.01847880286007], zoom: 13 });
+            map.flyTo({ center: [-123.0435033466378, 43.9379404351], zoom: 11 });
             marker4.togglePopup();
         });
 
@@ -336,7 +379,7 @@
         document.getElementById('link-amazon').addEventListener('click', function(e) {
             e.preventDefault();
             closeAllPopups(); // Closes any open popups first!
-            map.flyTo({ center: [-123.08584727224877, 44.03106648154335], zoom: 13 });
+            map.flyTo({ center: [-123.08584727224877, 43.9505281138], zoom: 11 });
             marker5.togglePopup();
         });
         

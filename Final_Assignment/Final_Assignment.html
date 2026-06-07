@@ -432,11 +432,11 @@
                         //html += `<li><strong>${row.Species}</strong> ${row.Scientific ? `(${row.Scientific})` : ''}</li>`;
                         // Code above was a bullet point list, code below is a check list
                         // Updated this section one again, assigning each checkbox a unique ID to prevent repetiton
+                        // Updated this section again to make the species name the link, rather than having text that says "learn more"
                         var safeId = row.Species.replace(/\s+/g, '-').toLowerCase();
                         html += `<li>
                             <input type="checkbox" id="check_${safeId}" class="bird-checkbox" value="${row.Species}">
-                            <label for="check_${safeId}"><strong>${row.Species}</strong> ${row.Scientific ? `(${row.Scientific})` : ''}</label>
-                            <a href="${row.Link}">learn more</a>
+                            <label for="check_${safeId}"><a href="${row.Link}"<strong>${row.Species}</strong></a> ${row.Scientific ? `(${row.Scientific})` : ''}</label>
                         </li>`;
                     }
                 });

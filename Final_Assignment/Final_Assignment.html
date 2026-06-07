@@ -48,9 +48,10 @@
             position: absolute;
             right: 0;
             z-index: 2;
-            padding: 1rem;
+            padding: 0; /* originally 1rem, trying to make it start closed*/
             background-color: WhiteSmoke;
-            width: 250px;
+            width: 0; /* Originally 250px*/
+            overflow-x: hidden; /* Added to hide content when closed */
             transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
         }
             
@@ -103,7 +104,7 @@
             right: 0;
             z-index: 1;
             transition: 0.5s;
-            font-size: 20px;
+            font-size: 15px; /* Originally 20px*/
             cursor: pointer;
             background-color: #111;
             color: white;

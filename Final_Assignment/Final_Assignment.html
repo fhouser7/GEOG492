@@ -113,6 +113,13 @@
             border-radius: 10px 0 0 10px;
             font-family: 'Roboto', serif;
         }
+
+        /* Formatting list of popup links in left sidebar to get rid of bullet points and indent the list*/
+        .link-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
  
     </style>
     <!-- Making every link automatically open to a new tab-->
@@ -137,7 +144,7 @@
             </h7>
             <br></br>
             <h3><strong>Featured Areas:</strong></h3>
-            <ul>
+            <ul class="link-list">
                 <li><a href="#" id="link-fern">Fern Ridge Wildlife Area</a></li>
                 <li><a href="#" id="link-delta">Delta Ponds</a></li>
                 <li><a href="#" id="link-amazon">Amazon Park</a></li>
@@ -425,7 +432,8 @@
                 // Adding the scrollable bird list container
                 // had some issues here and had to ask AI what the issue was
                 // I simply forgot to include <ul class="bird-list"> at the end of this line
-                html += '<div style="max-height: 200px; overflow-y: auto; border-top: 1px solid #ccc; padding-top: 5px;"><ul class="bird-list">';
+                // Added style="list-style-type:none;" to end of ul tag to remove the bullet points from the popup bird lists
+                html += '<div style="max-height: 200px; overflow-y: auto; border-top: 1px solid #ccc; padding-top: 5px;"><ul class="bird-list" style="list-style-type:none;">';
                 
                 // Looping through rows and add bird names
                 birdData.forEach(function(row) {

@@ -419,6 +419,10 @@
                 if (description) {
                     html += `<div style="margin-bottom: 10px;">${description}</div>`;
                 }
+
+                // Adding total species count to popups
+                html += `<h7><strong>Species Count:</strong> ${birdData.length}</h7>`
+
                 //Adding search
                 html += `
                     <div style="margin-bottom: 10px;">

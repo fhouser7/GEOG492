@@ -173,6 +173,23 @@
             background-color: #221655;
             --hover-color: #140C36;
         }
+
+        .user-count {
+            position: absolute;
+            display: block;
+            padding: 3px 10px;
+            bottom: 30px;
+            right: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            text-align: center;
+            background-color: Whitesmoke;
+        }
+
+        .user-count h5 {
+            margin: 0;
+            font-size: 18px;
+        }
  
     </style>
     <!-- Making every link automatically open to a new tab-->
@@ -212,6 +229,9 @@
             <a class="closebtn" onclick="closeNav()" style="cursor: pointer;">&times;</a>
             <h3>Your Bird List:</h3>
             <ul id="user-bird-list"></ul>
+            <ul class="user-count">
+                <h5>Total Species Count: <span id="user-bird-count">0</span></h5>
+            </ul>
         </div>
         <!-- Open sidebar button -->
         <button id="open-btn" class="openbtn" onclick="openNav()">&#9776; Bird List</button>
@@ -228,7 +248,10 @@
         // Function to refresh the right sidebar
         function updateBirdListSidebar() {
             var sidebarList = document.getElementById('user-bird-list');
+            var countElement = document.getElementById('user-bird-count');
             sidebarList.innerHTML = ''; // Clear current list
+
+            countElement.textContent = userBirdList.size;
             
             // Add each checked bird as a new list item
             userBirdList.forEach(function(birdName) {

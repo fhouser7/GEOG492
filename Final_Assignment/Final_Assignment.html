@@ -149,7 +149,7 @@
                 <li><a href="#" id="link-delta">Delta Ponds</a></li>
                 <li><a href="#" id="link-amazon">Amazon Park</a></li>
                 <li><a href="#" id="link-oak">Black Oak Basin Park</a></li>
-                <li><a href="#" id="link-pisgah">Mt. Pitsgah Arboretum</a></li>
+                <li><a href="#" id="link-pisgah">Mt. Pisgah Arboretum</a></li>
             </ul>
             <br></br>
             <button type="button" class="info_btn" id="info_btn"><i class="fa fa-info"></i></button>
@@ -226,8 +226,8 @@
             .setHTML(popup1_content);
             
         
-        // Popup for Mt Pitsgah Arboretum 
-        var popup2_content = '<h2>Mt Pitsgah Arboretum</h2><br>';
+        // Popup for Mt Pisgah Arboretum 
+        var popup2_content = '<h2>Mt Pisgah Arboretum</h2><br>';
         var popup2 = new mapboxgl.Popup({ minWidth:'300px' })
             .setHTML(popup2_content);
 
@@ -278,7 +278,7 @@
             .addTo(map);
 
             
-        // Marker 2 - Mt Pitsgah Arboretum
+        // Marker 2 - Mt Pisgah Arboretum
         var marker2 = new mapboxgl.Marker({color:'DarkBlue'})
             .setLngLat([-122.979393984357, 44.005851242467145])
             .setPopup(popup2)  
@@ -316,7 +316,7 @@
                 });
         });
 
-        // Add a 'Listener' to Mt Pitsgah Arboretum popup
+        // Add a 'Listener' to Mt Pisgah Arboretum popup
         marker2.getElement().addEventListener('click', function () {
                 map.jumpTo({
                     center: [-122.979393984357, 43.9253128747], 
@@ -360,7 +360,7 @@
             marker1.togglePopup(); // Opens the popup
         });
 
-        // Mt. Pitsgah Arboretum (marker2)
+        // Mt. Pisgah Arboretum (marker2)
         document.getElementById('link-pisgah').addEventListener('click', function(e) {
             e.preventDefault();
             closeAllPopups(); // Closes any open popups first!
@@ -520,14 +520,14 @@
                 <a href="https://myodfw.com/fern-ridge-wildlife-area-visitors-guide">Learn More</a>`
             loadBirdCSV("EBird_data/fern_ridge2.csv", popup1, "Fern Ridge Lake", fernDesc);
 
-            var pitsgahDesc = `
+            var pisgahDesc = `
                 <img class="popupImage" alt="Single Anna's Hummingbird perched on a branch of a tree" src="annas_hummingbird.JPG" style="margin-bottom: 10px;">
                 <p style="margin: 0 0 5px 0;"><em>Anna's Hummingbird, photograph: Fiona Houser</em></p>
                 <p style="margin: 5px 0;">The Mt Pisgah Arboretum is a nature education facility that focuses on constructing 
                     and fostering many small native Oregon ecosystems. One can find many songbirds and birds of prey here. 
                     It is a popular spot for migrating birds from Central and Southern America in the summers.</p>
                 <a href="https://mountpisgaharboretum.org/" target="_blank">Learn More</a>`;
-            loadBirdCSV("EBird_data/mt_pitsgah2.csv", popup2, "Mt Pisgah Arboretum", pitsgahDesc);
+            loadBirdCSV("EBird_data/mt_pisgah2.csv", popup2, "Mt Pisgah Arboretum", pisgahDesc);
             
             // For Delta Ponds, we pass both the description paragraph AND the link together into the 4th argument:
             var deltaDesc = `

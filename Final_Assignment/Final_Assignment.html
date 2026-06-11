@@ -126,6 +126,53 @@
             padding: 0;
             margin: 0;
         }
+
+        /* Putting small white space between buttons*/
+        .link-list li {
+            margin-bottom: 10px;
+        }
+
+        .link-btn {
+            display: block; /* Makes the link behave like a block button */
+            padding: 10px;
+            background-color: #1f4e5b; /* Choose any color you want for your marker match experiment */
+            color: white !important;   /* Force text color to stay white over standard link blue */
+            text-align: center;
+            text-decoration: none;     /* Removes the link underline */
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: background 0.3s ease;
+        }
+
+        .link-btn:hover {
+            background-color: var(--hover-color);
+            text-decoration: none;
+        }
+
+        .link-btn-fern {
+            background-color: #B72E2A;
+            --hover-color: #91221F;
+        }
+
+        .link-btn-delta {
+            background-color: #AE327A;
+            --hover-color: #8A245F;
+        }
+
+        .link-btn-amazon {
+            background-color: #7201A8;
+            --hover-color: #550080;
+        }
+
+        .link-btn-oak {
+            background-color: #3e049c;
+            --hover-color: #2B0273;
+        }
+
+        .link-btn-pisgah {
+            background-color: #221655;
+            --hover-color: #140C36;
+        }
  
     </style>
     <!-- Making every link automatically open to a new tab-->
@@ -151,11 +198,11 @@
             <br></br>
             <h3><strong>Featured Areas:</strong></h3>
             <ul class="link-list">
-                <li><a href="#" id="link-fern">Fern Ridge Wildlife Area</a></li>
-                <li><a href="#" id="link-delta">Delta Ponds</a></li>
-                <li><a href="#" id="link-amazon">Amazon Park</a></li>
-                <li><a href="#" id="link-oak">Black Oak Basin Park</a></li>
-                <li><a href="#" id="link-pisgah">Mt. Pisgah Arboretum</a></li>
+                <li><a href="#" id="link-fern" class="link-btn link-btn-fern">Fern Ridge Wildlife Area</a></li>
+                <li><a href="#" id="link-delta" class="link-btn link-btn-delta">Delta Ponds</a></li>
+                <li><a href="#" id="link-amazon" class="link-btn link-btn-amazon">Amazon Park</a></li>
+                <li><a href="#" id="link-oak" class="link-btn link-btn-oak">Black Oak Basin Park</a></li>
+                <li><a href="#" id="link-pisgah" class="link-btn link-btn-pisgah">Mt. Pisgah Arboretum</a></li>
             </ul>
             <br></br>
             <button type="button" class="info_btn" id="info_btn"><i class="fa fa-info"></i></button>
@@ -278,35 +325,35 @@
         /***  MARKERS  ***/
         // Part A II. markers go here
         // Marker 1 - Fern Ridge lake
-        var marker1 = new mapboxgl.Marker({color:'DarkBlue'})
+        var marker1 = new mapboxgl.Marker({color:'#B72E2A'})
             .setLngLat([-123.25978496851499, 44.070538367785105])
             .setPopup(popup1) 
             .addTo(map);
 
             
         // Marker 2 - Mt Pisgah Arboretum
-        var marker2 = new mapboxgl.Marker({color:'DarkBlue'})
+        var marker2 = new mapboxgl.Marker({color:'#221655'})
             .setLngLat([-122.979393984357, 44.005851242467145])
             .setPopup(popup2)  
             .addTo(map);
 
             
         // Marker 3 - Delta Ponds
-        var marker3 = new mapboxgl.Marker({color:'DarkBlue'})
+        var marker3 = new mapboxgl.Marker({color:'#AE327A'})
             .setLngLat([-123.1075878959009, 44.078239495360066])
             .setPopup(popup3) 
             .addTo(map);
 
 
         // Marker 4 - Black Oak Basin Park
-        var marker4 = new mapboxgl.Marker({color:'DarkBlue'})
+        var marker4 = new mapboxgl.Marker({color:'#3e049c'})
             .setLngLat([-123.0435033466378, 44.01847880286007])
             .setPopup(popup4)
             .addTo(map);
 
         
         // Marker 5 - Amazon Park
-        var marker5 = new mapboxgl.Marker({color:'DarkBlue'})
+        var marker5 = new mapboxgl.Marker({color:'#7201A8'})
             .setLngLat([-123.08584727224877, 44.03106648154335])
             .setPopup(popup5)
             .addTo(map);
